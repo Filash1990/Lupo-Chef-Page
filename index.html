@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<head>
+  <link
+    href="https://fonts.googleapis.com/css?family=Parisienne"
+    rel="stylesheet"
+  />
+  <link
+    href="https://fonts.googleapis.com/css?family=Gentium+Book+Basic&display=swap"
+    rel="stylesheet"
+  />
+
+  <link href="style.css" rel="stylesheet" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
+<body>
+  <nav>
+    <div class="socials">
+      <ul>
+        <li>
+          <a href="https://www.facebook.com/alberto.pasqualin.9" target="_blank"
+            ><img src="facebook.png"
+          /></a>
+        </li>
+        <li>
+          <a
+            href="https://www.instagram.com/pasqualinalberto/?hl=it"
+            target="_blank"
+            ><img src="instagram.png"
+          /></a>
+        </li>
+      </ul>
+    </div>
+
+    <div class="logo">
+      <p>Pasqualin Alberto</p>
+    </div>
+    <ul class="nav-links" id="nav-links">
+      <li class="nav-link">
+        <a href="#banner-section">Home</a>
+      </li>
+      <li class="nav-link">
+        <a href="#about">About Me</a>
+      </li>
+      <li class="nav-link">
+        <a href="#gallery-section">Gallery</a>
+      </li>
+      <li class="nav-link">
+        <a href="#samples">Samples</a>
+      </li>
+      <li class="nav-link">
+        <a href="#contact-section">Contact</a>
+      </li>
+    </ul>
+    <div class="burger">
+      <div class="line1"></div>
+      <div class="line2"></div>
+      <div class="line3"></div>
+    </div>
+  </nav>
+  <!--Slider-->
+  <div class="section" id="banner-section">
+    <div class="slider">
+      <div class="ban-img" id="ban-img1"></div>
+      <div class="ban-img" id="ban-img2"></div>
+      <div class="ban-img ban-active" id="ban-img3"></div>
+    </div>
+  </div>
+  <!--About me-->
+  <div class="section" id="about">
+    <h2>About me...</h2>
+    <div id="about-container">
+      <p>
+        Welcome to your private chef experience!<br />
+        My name is Alberto and I have been a chef for many yers.<br />
+        My passion started when I was a child and developed during the school
+        year.<br />
+        I have studied in Italy and completed Catering college in 2009.<br />
+        I have worked in various restaurants in Italy looking to improve my
+        skills and expand my knowledge as a chef.<br />
+        I have worked in traditional Italian restaurants, Pastry shops, bakery
+        and some of them Michelin star.<br />
+        In 2011 I have decided to move to London to learn the language and to
+        discover the varieties of cuisine that the Capital has to offer.<br />
+        After a couple of year I became Head Chef for a very well kwon Gastro
+        Pub in West London and I stayed there for a few years.<br />
+        I than moved onto events catering, both private and corporate. This gave
+        me the opportunity to work for one of the leading company in UK.<br />
+        All of those changes brought me to learn a lot of new skill, techniques
+        and cuisine which I intend to use to create an exciting and pleasant
+        experience for your family and friends.
+      </p>
+      <div id="about-img"></div>
+    </div>
+  </div>
+  <!--gallery-->
+  <div class="section" id="gallery-section">
+    <h2 id="gallery-tittle">Gallery</h2>
+    <div id="gallery" class="gallery">
+      <img src="1.jpeg" class="gallery__img" id="1" alt="Image 1" />
+      <img src="2.jpeg" class="gallery__img" id="2" alt="Image 2" />
+      <img src="3.jpeg" class="gallery__img" alt="Image 3" />
+      <img src="4.jpeg" class="gallery__img" alt="Image 4" />
+      <img src="5.jpeg" class="gallery__img" alt="Image 5" />
+      <img src="6.jpeg" class="gallery__img" alt="Image 6" />
+      <img src="7.jpeg" class="gallery__img" alt="Image 7" />
+      <img src="8.jpeg" class="gallery__img" alt="Image 8" />
+      <img src="9.jpeg" class="gallery__img" alt="Image 9" />
+      <img src="10.jpeg" class="gallery__img" alt="Image 10" />
+      <img src="11.jpeg" class="gallery__img" alt="Image 11" />
+      <img src="12.jpeg" class="gallery__img" alt="Image 12" />
+      <img src="13.jpeg" class="gallery__img" alt="Image 13" />
+      <img src="14.jpeg" class="gallery__img" alt="Image 14" />
+      <img src="15.jpeg" class="gallery__img" alt="Image 15" />
+      <img src="16.jpeg" class="gallery__img" alt="Image 16" />
+    </div>
+    <div id="modal" class="modal">
+      <div class="imgbtn" id="imgbtn-prev"></div>
+
+      <div id="display"></div>
+
+      <div class="imgbtn" id="imgbtn-next"></div>
+    </div>
+  </div>
+  <!--Samples-->
+  <div class="section" id="samples">
+    <h2>Dish Samples</h2>
+    <div class="dishes" id="dish1">
+      <img src="1.jpeg" class="sample-img" id="1" alt="Image 1" />
+      <div class="dish-description">
+        <h3>Royal Cezar Salad</h3>
+        <p>
+          A Caesar salad (also spelled Cesar and Cesare) is a green salad of
+          romaine lettuce and croutons dressed with lemon juice (or lime juice),
+          olive oil, egg, Worcestershire sauce, anchovies, garlic, Dijon
+          mustard, Parmesan cheese, and black pepper. In its original form, this
+          salad was prepared and served tableside.
+        </p>
+      </div>
+    </div>
+    <div class="dishes" id="dish2">
+      <div class="dish-description">
+        <h3>Hongshao rou</h3>
+        <img src="2.jpeg" class="sample-img" id="dish-reverse" alt="Image 2" />
+        <p>
+          Hongshao rou is a classic pork dish from mainland China, cooked using
+          pork belly and a combination of ginger, garlic, aromatic spices,
+          chilli peppers, sugar, light and dark soy, and rice wine.
+        </p>
+      </div>
+      <div>
+        <img src="2.jpeg" class="sample-img" id="dish-normal" alt="Image 2" />
+      </div>
+    </div>
+    <div class="dishes" id="dish3">
+      <img src="4.jpeg" class="sample-img" id="1" alt="Image 1" />
+      <div class="dish-description">
+        <h3>Miso Soup</h3>
+        <p>
+          The most common dashi soup stocks for miso soup are made of niboshi
+          (dried baby sardines), kombu (dried kelp), katsuobushi (thin shavings
+          of dried and smoked bonito, aka skipjack tuna), or hoshi-shiitake
+          (dried shiitake).
+        </p>
+      </div>
+    </div>
+  </div>
+  <!--info tab, activate links and change image. add something to give life to this section. Check colors-->
+  <div class="section" id="contact-section">
+    <h2>Contacts</h2>
+    <div id="contact-box">
+      <ul>
+        <li><a href="callto:07925524032">Phone: 07925524032</a></li>
+        <li>
+          <a href="mailto: alberto.pasqualon26@gmail.com" target="_blank"
+            >Email: alberto.pasqualon26@gmail.com</a
+          >
+        </li>
+        <li>
+          <a href="http://instagram.com/_u/pasqualinalberto/" target="_blank"
+            >Instagram: albertopasqualin</a
+          >
+        </li>
+        <li>
+          <a href="https://www.facebook.com/alberto.pasqualin.9" target="_blank"
+            >Facebook: Alberto Pasqualin</a
+          >
+        </li>
+      </ul>
+    </div>
+  </div>
+  <!--back to top bottom right-->
+  <div id="toTop">
+    <a href="#banner-section">Back to Top</a>
+  </div>
+  <script
+    src="https://code.jquery.com/jquery-3.4.1.min.js"
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+    crossorigin="anonymous"
+  ></script>
+  <script src="app2.js"></script>
+</body>

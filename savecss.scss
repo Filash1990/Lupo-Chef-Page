@@ -1,0 +1,471 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-family: "DM Serif Display", serif;
+  font-weight: 300;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  background-image: linear-gradient(
+    to top,
+    #515670 0%,
+    /*bot*/ #7a7878 30%,
+    #202020 40%,
+    #131316 100% /*top*/
+  );
+  color: white;
+}
+h2 {
+  color: #fdda78;
+}
+/*done*/
+#carousel-container {
+  width: 1080px;
+  height: 722px;
+  @include flexCenter;
+}
+
+$whiteBorder: solid 1px white;
+@mixin flexCenter {
+  display: flex;
+  justify-content: flex;
+  align-items: flex;
+}
+#banner-section {
+  background-color: red !important;
+}
+/*nav*/
+.section {
+  width: 90vw;
+  height: 80vh;
+  margin: auto;
+  text-align: center;
+  border-top: solid 1px white;
+}
+nav {
+  position: fixed;
+  top: 0px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  min-height: 8vh;
+  background-image: linear-gradient(
+    to top,
+    #fdda78 0%,
+    #ffffff 15%,
+    #ffffff 100%
+  );
+  z-index: 10;
+}
+.logo p {
+  color: black;
+  font-size: 40px;
+  font-weight: 200;
+  font-family: "Parisienne", cursive;
+  position: relative;
+  bottom: -12px;
+  z-index: 12;
+}
+#chef {
+  text-transform: uppercase;
+  font-size: 10px;
+  position: absolute;
+  top: -5px;
+}
+.nav-links {
+  display: flex;
+  width: 40%;
+  justify-content: space-around;
+}
+.nav-links li {
+  list-style-type: none;
+}
+.nav-links a {
+  color: black;
+  text-decoration: none;
+  letter-spacing: 1px;
+  font-weight: bold;
+  font-size: 20px;
+  transition: 0.3s;
+}
+.nav-links a:hover {
+  color: rgb(221, 150, 56);
+}
+.burger {
+  display: none;
+  cursor: pointer;
+}
+.burger div {
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  margin: 3px;
+  transition: all 0.3s ease;
+}
+@media screen and (max-width: 768px) {
+  body {
+    overflow-x: hidden;
+  }
+  .nav-links {
+    position: absolute;
+    right: 0px;
+    height: 92vh;
+    top: 8vh;
+    background-color: #2c2b29;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+    transform: translatex(100%);
+    transition: transform 0.5s ease-in;
+  }
+  .nav-links li {
+    opacity: 0;
+  }
+  .burger {
+    display: block;
+  }
+  #contact {
+    font-size: 20px;
+  }
+  #about {
+    min-height: 150vh;
+  }
+  #about-img {
+    display: none;
+  }
+  .logo {
+    font-size: 32px;
+  }
+  #toTop {
+    width: 25vw;
+  }
+  .sample {
+    width: 200px;
+    height: 35vh;
+  }
+  #dishes {
+    flex-direction: column;
+  }
+  /*#banner {
+    height: 40vh;
+  }*/
+}
+.nav-active {
+  transform: translateX(0%);
+  z-index: 10;
+}
+@keyframes navLinkFade {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+.toggle .line1 {
+  transform: rotate(-45deg) translate(-5px, 3px);
+}
+.toggle .line2 {
+  opacity: 0;
+}
+.toggle .line3 {
+  transform: rotate(45deg) translate(-5px, -3px);
+}
+/*socials*/
+.socials li {
+  display: inline-block;
+  padding: 0px 0.5vw;
+  filter: invert(100%);
+}
+/*slider*/
+
+.ban-img {
+  background-size: contain;
+  background-repeat: no-repeat;
+  height: 100%;
+  display: none;
+  animation-name: fadein;
+  animation-duration: 3s;
+  border-radius: 20px;
+}
+@keyframes fadein {
+  from {
+    opacity: 0.3;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.active-img {
+  display: block;
+}
+#ban-img1 {
+  background-image: url("1.jpg");
+}
+#ban-img2 {
+  background-image: url("2.jpg");
+}
+#ban-img3 {
+  background-image: url("3.jpeg");
+}
+/*about me*/
+@media only screen and (max-width: 600px) {
+  #about p {
+    font-size: 15px;
+  }
+}
+#about {
+  margin: 8vh auto;
+}
+#about-container {
+  display: flex;
+  padding-top: 5vh;
+}
+#about p {
+  font-size: 3.5vh;
+  text-align: left;
+}
+#about-img {
+  background-image: url("chef.png");
+  background-repeat: no-repeat;
+  width: 40%;
+}
+/*gallery*/
+#gallery-section {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  margin-top: 10vh;
+}
+#gallery-tittle {
+  margin-bottom: 20px;
+}
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(4, auto);
+  grid-template-rows: repeat(4, 20%);
+  grid-gap: 20px;
+  height: 100vh;
+}
+.gallery__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: ease-in-out 0.2s;
+  border-radius: 5px;
+}
+.gallery__img:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+}
+.section h2 {
+  font-size: 40px;
+}
+/*modal*/
+#modal {
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(8, 8, 8, 0.507);
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  z-index: 20;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 40px;
+  color: white;
+}
+#display {
+  width: 90%;
+  height: 93%;
+}
+#display img {
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+}
+#modal p {
+  position: absolute;
+  top: 4vh;
+  right: 2vw;
+  display: block;
+}
+.modal {
+  visibility: hidden;
+}
+.modalActive {
+  visibility: visible;
+}
+/*btn*/
+.imgbanbtn {
+  width: 40px;
+  height: 40px;
+  background-color: white;
+  border-radius: 4px;
+  position: absolute;
+  top: 50%;
+  margin-top: -40px;
+  opacity: 0.6;
+  cursor: pointer;
+}
+.imgbanbtn:hover {
+  opacity: 0.9;
+}
+.imgbanbtn-prev {
+  left: 1.5vw;
+  background-image: url(left-arrow.png);
+  background-size: 60%;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.imgbanbtn-next {
+  right: 1.5vw;
+  background-image: url("right-arrow.png");
+  background-size: 60%;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+/*contact*/
+#container3 {
+  margin: auto;
+  line-height: 60px;
+  display: flex;
+  flex-direction: column;
+  font-size: 30px;
+  font-weight: bold;
+  height: 100vh;
+}
+#container3 h2 {
+  padding: 100px;
+}
+#container3 ul li {
+  list-style-type: none;
+  display: block;
+}
+#container3 a,
+#container3 a:visited {
+  color: white;
+  text-decoration: none;
+}
+/*samples*/
+#samples {
+  display: flex;
+  flex-direction: column;
+}
+.big-sample {
+  width: 80vw;
+  height: 70vh;
+  position: fixed;
+  top: 15vh;
+  box-shadow: 0px 0px 0px 100vw rgba(0, 0, 0, 0.75);
+}
+.sample {
+  background: white;
+  width: 30vw;
+  height: 70vh;
+  margin: 20px;
+  border-radius: 20px;
+  font-size: 30px;
+  font-weight: bold;
+  cursor: pointer;
+  line-height: 35px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#sample1 {
+  color: transparent;
+  transition: color 0.3s;
+  background-image: url("9.jpeg");
+  background-size: cover;
+}
+#sample1:hover {
+  color: black;
+}
+#sample2 {
+  color: transparent;
+  transition: color 0.3s;
+  background-image: url("4.jpeg");
+  background-size: cover;
+}
+#sample2:hover {
+  color: black;
+}
+#dishes {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/*@media screen and (max-width: 768px){
+  .sample{
+      width: 50vw;
+  }
+  .big-sample{
+  width: 80vw;
+  height: 70vh;
+  
+}*/
+
+/*to top*/
+#toTop {
+  width: 10vw;
+  height: 8vh;
+  position: fixed;
+  bottom: 0px;
+  right: 1vw;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.384);
+  border-radius: 5px;
+  font-weight: bold;
+  letter-spacing: 0.5px;
+  font-size: 2vh;
+  transition: 0.3s ease-in-out;
+  box-shadow: 0px -5px 50px 0px rgba(245, 243, 243, 0.01);
+}
+#toTop a,
+#toTop a:visited {
+  text-decoration: none;
+  color: black;
+}
+#toTop a:hover {
+  color: goldenrod;
+}
+
+/*restyling
+Normal
+carousel size 1080x750 check files
+fix carousel
+too static
+remove section border at carousel
+change font(cehck letter spacing)
+add blur filter(opacque background)
+fix gallery images(contain+background div)
+more background black filter while modal on
+menu sample remove
+add dish sample (img on side, description and switch sides)
+general animation
+font-color in general
+
+Mobile
+Remove Private Chef
+Make Alberto Pasqualin smaller, get in same horizontal line with menu/socials
+check side margins(fixed with font size of alberto)
+carousel round borders, remove bottom free space
+bnack to dop size fix
+
+DONE
+background-color change (gradient ok, keep looking)
+more text color(titles)
+
+*/
